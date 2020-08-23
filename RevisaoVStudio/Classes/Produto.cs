@@ -30,6 +30,7 @@ namespace RevisaoVStudio.Classes
             produtos.Add(new Produto() { Nome = "Fraldinha", Categoria = "Carne", Valor = 10, CustoMedio = new List<int> { 1, 2, 3, 4 } });
             produtos.Add(new Produto() { Nome = "Acem", Categoria = "Carne", Valor = 10, CustoMedio = new List<int> { 1, 2, 3, 4 } });
             produtos.Add(new Produto() { Nome = "Arroz", Categoria = "Alimento", Valor = 5, CustoMedio = new List<int> { 1, 2, 3, 4 } });
+            produtos.Add(new Produto() { Nome = "Feijão", Categoria = "Alimento", Valor = 5, CustoMedio = new List<int> { 1, 2, 3, 4 } });
 
             return produtos;
         }

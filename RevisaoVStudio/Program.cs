@@ -16,8 +16,11 @@ namespace RevisaoVStudio
         static void Main(string[] args)
         {
             Produto produtosObj = new Produto();
+            Student estudantesObj = new Student();
 
             var produtos = produtosObj.Listar();
+            var students = estudantesObj.ListarEstudantes();
+
 
             #region Exemplos GroupBy
 
@@ -103,6 +106,49 @@ namespace RevisaoVStudio
 
             //} 
             #endregion
+
+
+            #region Exemplo Subconsulta em Agrupamento
+            //var queryGroupMax = from student in students
+            //                    group student by student.Year into studentGroup
+            //                    orderby studentGroup.Key
+            //                   select new
+            //                   {
+            //                       Level = studentGroup.Key,
+            //                       HighestScore =
+            //                       (from student2 in studentGroup
+            //                        select student2.ExamScores.Average()).Max()
+            //                   };
+
+            //int count = queryGroupMax.Count();
+            //Console.WriteLine($"Number of groups = {count}");
+
+            //foreach (var item in queryGroupMax)
+            //{
+            //    Console.WriteLine($"  {item.Level} Highest Score={item.HighestScore}");
+            //}
+
+            //// ---------------- Mesma consulta a cima escrita com lambda ----------------------------
+
+            //var queryGroupMaxLambda = students
+            //                          .GroupBy(student => student.Year)
+            //                          .Select(GroupStudents => new
+            //                          {
+            //                              Level = GroupStudents.Key,
+            //                              HighestScore = GroupStudents.Select(student2 => student2.ExamScores.Average()).Max()
+
+            //                          });
+
+            //int count = queryGroupMax.Count();
+            //Console.WriteLine($"Number of groups = {count}");
+
+            //foreach (var item in queryGroupMax)
+            //{
+            //    Console.WriteLine($"  {item.Level} Highest Score={item.HighestScore}");
+            //} 
+            #endregion
+
+
 
 
             Console.ReadKey();

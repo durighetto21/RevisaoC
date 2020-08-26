@@ -17,9 +17,11 @@ namespace RevisaoVStudio
         {
             Produto produtosObj = new Produto();
             Student estudantesObj = new Student();
+            
 
-            var produtos = produtosObj.Listar();
+            var produtosTop = produtosObj.Listar();
             var students = estudantesObj.ListarEstudantes();
+            
 
 
             #region Exemplos GroupBy

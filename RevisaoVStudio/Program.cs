@@ -19,7 +19,7 @@ namespace RevisaoVStudio
             Student estudantesObj = new Student();
             
 
-            var produtosTop = produtosObj.Listar();
+            var produtosToptop = produtosObj.Listar();
             var students = estudantesObj.ListarEstudantes();
             
 
